@@ -57,16 +57,17 @@ skills/<beat>/           one skill per beat, project as intake: loads the projec
 
 1. Install the plugin:
    ```
-   /plugin marketplace add <your-org>/brand-system-builder
-   /plugin install brand-system-builder
+   /plugin marketplace add LiamJMajor/brand-system-builder
+   /plugin install brand-system-builder@brand-system-builder
    ```
+   (For another organisation: fork this repository and add your fork.)
 2. Gather whatever your organisation already has that says who it is: a mission statement, brand guidelines, a style guide, a comms strategy, a pitch deck, the about page. Any one of them is enough to start. Ask Claude to bootstrap the brand system from it. The `bootstrap-brand-system` skill distils the shared core (story, pillars, who speaks when, escalation, channels) from whatever it is given and marks the rest TODO with an owner.
 3. Onboard your organisation's own voice first, as a project. Every other project translates the shared pillars into its own product benefits, so the shared layer has to exist before any project can.
 4. Onboard your flagship projects one at a time: register, draft from public sources, interview one maintainer, validate, file three examples, go live.
 5. Codify the single most common request as a skill. Evaluate it across two live projects. Give it to a small group. Measure how many outputs ship without a human rebuild.
 6. Batch-onboard the long tail of stewarded projects from a CSV. Audit before and after.
 
-A worked example: `seeds/open-home-foundation/` is one organisation's shared core, distilled from its communications strategy document. Use it as a reference for what a seed looks like, not as a template for your content.
+A worked example: `seeds/open-home-foundation/` is one organisation's shared core, distilled from its communications strategy document, and the brand system it produced lives in its own repository at [LiamJMajor/ohf-brand-system](https://github.com/LiamJMajor/ohf-brand-system). Use the seed as a reference for what one looks like, not as a template for your content.
 
 ## Read next
 

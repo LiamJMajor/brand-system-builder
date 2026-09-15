@@ -109,6 +109,12 @@ def main() -> int:
               "description": f"{a.org} brand system: shared core, project voices, truths, examples and self-serve skills.",
               "author": {"name": a.org}}
     write(target / ".claude-plugin" / "plugin.json", json.dumps(plugin, indent=2) + "\n", a.force)
+    write(target / ".claude-plugin" / "marketplace.json", json.dumps({
+        "$schema": "https://anthropic.com/claude-code/marketplace.schema.json", "name": plugin["name"],
+        "description": plugin["description"], "owner": {"name": a.org},
+        "plugins": [{"name": plugin["name"], "displayName": f"{a.org} Brand System", "description": plugin["description"],
+                     "version": plugin["version"], "author": {"name": a.org}, "source": "./", "category": "productivity"}],
+    }, indent=2) + "\n", a.force)
 
     # Seed projects
     registered = []

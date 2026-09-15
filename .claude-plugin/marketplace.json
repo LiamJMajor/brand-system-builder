@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "brand-system-builder",
+  "description": "Skills that build and maintain a brand system: onboard projects, capture judgment, harvest examples, sync truths, codify workflows, define standards, evaluate skills, promote corrections, audit.",
+  "owner": {
+    "name": "Open Home Foundation"
+  },
+  "plugins": [
+    {
+      "name": "brand-system-builder",
+      "displayName": "Brand System Builder",
+      "description": "Skills that build and maintain a brand system: onboard projects, capture judgment, harvest examples, sync truths, codify workflows, define standards, evaluate skills, promote corrections, audit.",
+      "version": "0.1.0",
+      "author": {"name": "Open Home Foundation"},
+      "source": "./",
+      "category": "productivity",
+      "keywords": ["brand", "marketing", "governance", "skills"],
+      "homepage": "https://github.com/LiamJMajor/brand-system-builder"
+    }
+  ]
+}

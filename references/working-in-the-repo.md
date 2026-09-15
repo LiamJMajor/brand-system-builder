@@ -37,4 +37,4 @@ Two people onboarding two projects touch different directories and never conflic
 |---|---|---|
 | The builder (skills, scripts, spec) | its own repository, installed as a plugin | almost nobody; installed, not cloned |
 | The brand system (core, projects, truths, examples, skills) | its own repository | everyone who contributes |
-The two can share one repository while a team is small. Split them when contributors to the brand system stop caring about the builder's internals.
+They are separate repositories. The builder is installed as a plugin by the people who maintain the brand system; the brand system is installed as a plugin by everyone who builds to it, and cloned by those who change it.
