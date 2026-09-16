@@ -40,6 +40,18 @@ For `stewarded` projects, stop after Positioning, Boilerplate and naming. Set st
 ## Stage 3: interview the maintainer
 Run `capture-judgment` scoped to this project, with the drafted files open. The interview confirms or rejects each draft rule, supplies the contrast pairs, fills modes, and gives the examples to harvest. Set status `interviewed`. Set `draft: false` on files the maintainer confirmed.
 
+**Propagate every ruling before moving on.** Stage 2 drafts the brand files in parallel, which is fast but leaves them as siblings rather than derivations. `references/project-spec.md` says `brand/strategy.md` is the source the other brand files derive from, and that is not true of how they were written. So a ruling made against one file does not reach the others on its own, and the drafts will quietly disagree with each other.
+
+After each round, before setting `draft: false` on anything:
+- A rule rescoped or reclassified in `brand/voice.md` is also in `brand/strategy.md` under Personality, usually worded differently. Fix both.
+- A rule moved between files is deleted from the file it left. A rule that lives in two files will be rediscovered as a contradiction later.
+- A word banned in `brand/style.md` is also in the drafted prose. Grep the whole project directory for it, including `PROJECT.md`, not just the file where the ruling was made.
+- An audience objection confirmed in `brand/audiences.md` has a matching key message in `brand/messaging.md` that was written before the objection existed. Rewrite it to answer the confirmed objection.
+
+Found during ESPHome's onboarding, where two of three voice rulings failed to reach `brand/strategy.md`, and a banned word survived in four files after the ruling that banned it.
+
+**Record what a ruling overrides.** Some rulings correct the project's own practice rather than describing it. Drafting from observed practice codifies the practice, including the parts the organisation wants changed. When a ruling contradicts published copy, say so in the file: what the published copy does, that it is a gap rather than a description, and who owns fixing it. An agent will meet the published version in the wild and must know not to copy it.
+
 ## Stage 4: validate
 ```
 python3 ${CLAUDE_PLUGIN_ROOT}/scripts/validate_project.py <repo> <slug>
