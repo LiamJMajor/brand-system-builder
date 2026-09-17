@@ -50,6 +50,12 @@ After each round, before setting `draft: false` on anything:
 
 Found during ESPHome's onboarding, where two of three voice rulings failed to reach `brand/strategy.md`, and a banned word survived in four files after the ruling that banned it.
 
+**Positioning cannot be drafted from frequency.** Stage 2 fills `brand/strategy.md` Positioning from public sources, and the sources will mislead you in a specific way: what a project mentions most is not what it is. Draft the positioning as a proposal and mark it as the one line in the project that a person must rule on, because no amount of reading settles it.
+
+Watch for this especially where a project sits downstream of a larger one in the same organisation. Its material will be full of the larger project, and a positioning drafted by weight of mentions will define the smaller project through the bigger one. That is wrong twice: it is not the project's position, and it makes one project's pitch depend on another's, which `core/voices.md` does not support.
+
+Read for qualifiers rather than counting nouns. Found during ESPHome's onboarding: Home Assistant is named throughout ESPHome's copy, and the drafted positioning made it definitional. Two sources carried the qualifier "or any other smart home system that supports it", and the ruling was that the position is building smart home devices, with compatibility a benefit and the goal being every system. The evidence for the correct position was present in the sources the whole time; frequency drowned it.
+
 **A contradiction is a question, never a decision.** When published copy disagrees with a rule in the project's files, you have found a contradiction, not an update. Do not resolve it by assuming the newer evidence wins, the more frequent pattern wins, or the project's own practice is authoritative. Put it to the human as a question, with both sides quoted and dated, and let them rule.
 
 The rule and the copy can each be wrong, and only a person can say which:
