@@ -50,6 +50,16 @@ After each round, before setting `draft: false` on anything:
 
 Found during ESPHome's onboarding, where two of three voice rulings failed to reach `brand/strategy.md`, and a banned word survived in four files after the ruling that banned it.
 
+**A contradiction is a question, never a decision.** When published copy disagrees with a rule in the project's files, you have found a contradiction, not an update. Do not resolve it by assuming the newer evidence wins, the more frequent pattern wins, or the project's own practice is authoritative. Put it to the human as a question, with both sides quoted and dated, and let them rule.
+
+The rule and the copy can each be wrong, and only a person can say which:
+- The rule was drafted from too little evidence and the copy is right. The rule changes.
+- The rule is right and the copy has drifted. The rule stands and the copy becomes a recorded deviation, with an owner for correcting it.
+
+Found during ESPHome's onboarding, where a release published mid-onboarding used sentence case headings against a Title Case rule drawn from the documentation guide and the previous release. Treating the newer post as authoritative would have rewritten a stated rule on the strength of one post. The ruling was that the rule stands and the post deviates.
+
+**Say when a rule rests on a single observation.** A rule drafted from one release, one post or one page describes that artefact, not the project. It cannot be distinguished later from a rule drawn from a dozen sources unless the file says so. Mark it, so that the next contradiction can be weighed rather than guessed at.
+
 **Record what a ruling overrides.** Some rulings correct the project's own practice rather than describing it. Drafting from observed practice codifies the practice, including the parts the organisation wants changed. When a ruling contradicts published copy, say so in the file: what the published copy does, that it is a gap rather than a description, and who owns fixing it. An agent will meet the published version in the wild and must know not to copy it.
 
 ## Stage 4: validate
