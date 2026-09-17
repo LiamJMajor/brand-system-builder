@@ -40,6 +40,34 @@ For `stewarded` projects, stop after Positioning, Boilerplate and naming. Set st
 ## Stage 3: interview the maintainer
 Run `capture-judgment` scoped to this project, with the drafted files open. The interview confirms or rejects each draft rule, supplies the contrast pairs, fills modes, and gives the examples to harvest. Set status `interviewed`. Set `draft: false` on files the maintainer confirmed.
 
+**Propagate every ruling before moving on.** Stage 2 drafts the brand files in parallel, which is fast but leaves them as siblings rather than derivations. `references/project-spec.md` says `brand/strategy.md` is the source the other brand files derive from, and that is not true of how they were written. So a ruling made against one file does not reach the others on its own, and the drafts will quietly disagree with each other.
+
+After each round, before setting `draft: false` on anything:
+- A rule rescoped or reclassified in `brand/voice.md` is also in `brand/strategy.md` under Personality, usually worded differently. Fix both.
+- A rule moved between files is deleted from the file it left. A rule that lives in two files will be rediscovered as a contradiction later.
+- A word banned in `brand/style.md` is also in the drafted prose. Grep the whole project directory for it, including `PROJECT.md`, not just the file where the ruling was made.
+- An audience objection confirmed in `brand/audiences.md` has a matching key message in `brand/messaging.md` that was written before the objection existed. Rewrite it to answer the confirmed objection.
+
+Found during ESPHome's onboarding, where two of three voice rulings failed to reach `brand/strategy.md`, and a banned word survived in four files after the ruling that banned it.
+
+**Positioning cannot be drafted from frequency.** Stage 2 fills `brand/strategy.md` Positioning from public sources, and the sources will mislead you in a specific way: what a project mentions most is not what it is. Draft the positioning as a proposal and mark it as the one line in the project that a person must rule on, because no amount of reading settles it.
+
+Watch for this especially where a project sits downstream of a larger one in the same organisation. Its material will be full of the larger project, and a positioning drafted by weight of mentions will define the smaller project through the bigger one. That is wrong twice: it is not the project's position, and it makes one project's pitch depend on another's, which `core/voices.md` does not support.
+
+Read for qualifiers rather than counting nouns. Found during ESPHome's onboarding: Home Assistant is named throughout ESPHome's copy, and the drafted positioning made it definitional. Two sources carried the qualifier "or any other smart home system that supports it", and the ruling was that the position is building smart home devices, with compatibility a benefit and the goal being every system. The evidence for the correct position was present in the sources the whole time; frequency drowned it.
+
+**A contradiction is a question, never a decision.** When published copy disagrees with a rule in the project's files, you have found a contradiction, not an update. Do not resolve it by assuming the newer evidence wins, the more frequent pattern wins, or the project's own practice is authoritative. Put it to the human as a question, with both sides quoted and dated, and let them rule.
+
+The rule and the copy can each be wrong, and only a person can say which:
+- The rule was drafted from too little evidence and the copy is right. The rule changes.
+- The rule is right and the copy has drifted. The rule stands and the copy becomes a recorded deviation, with an owner for correcting it.
+
+Found during ESPHome's onboarding, where a release published mid-onboarding used sentence case headings against a Title Case rule drawn from the documentation guide and the previous release. Treating the newer post as authoritative would have rewritten a stated rule on the strength of one post. The ruling was that the rule stands and the post deviates.
+
+**Say when a rule rests on a single observation.** A rule drafted from one release, one post or one page describes that artefact, not the project. It cannot be distinguished later from a rule drawn from a dozen sources unless the file says so. Mark it, so that the next contradiction can be weighed rather than guessed at.
+
+**Record what a ruling overrides.** Some rulings correct the project's own practice rather than describing it. Drafting from observed practice codifies the practice, including the parts the organisation wants changed. When a ruling contradicts published copy, say so in the file: what the published copy does, that it is a gap rather than a description, and who owns fixing it. An agent will meet the published version in the wild and must know not to copy it.
+
 ## Stage 4: validate
 ```
 python3 ${CLAUDE_PLUGIN_ROOT}/scripts/validate_project.py <repo> <slug>
